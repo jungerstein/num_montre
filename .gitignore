@@ -90,3 +90,9 @@ ENV/
 
 # Apple computer. 
 .DS_Store
+
+# Figures
+*.png
+
+# idea
+.idea
