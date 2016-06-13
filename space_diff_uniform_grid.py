@@ -25,7 +25,7 @@ def forward_diff_1d(array_val, dx):
 
 def backward_diff_1d(array_val, dx):
     array_backward_val = backward_array(array_val)
-    return (array_backward_val - array_val) / dx
+    return (array_val - array_backward_val) / dx
 
 
 def central_diff_1d(array_val, dx):

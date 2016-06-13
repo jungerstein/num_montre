@@ -12,6 +12,7 @@ def time_advance_profile_with_constant_dt(advancing_func, array_init, dx, dt, n_
 
 
 def plot_profile(profile, dx, t_list, filename, title, cmin=-1.0, cmax=1.0):
+    pyplot.figure()
     nx = len(profile[0])
     x = np.linspace(0, (nx + 1) * dx, nx + 1)
     pyplot.pcolor(x, t_list, profile)

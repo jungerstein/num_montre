@@ -15,10 +15,10 @@ def forward_space_forward_time(old_solution, dx, dt, a):
     return constant_advancing_euler_eq(old_solution, spacediff.forward_diff_1d, a, dx, dt)
 
 
-def central_space_central_time(old_solution, dx, dt, a):
+def central_space_forward_time(old_solution, dx, dt, a):
     return constant_advancing_euler_eq(old_solution, spacediff.central_diff_1d, a, dx, dt)
 
 
-def backward_space_backward_time(old_solution, dx, dt, a):
+def backward_space_forward_time(old_solution, dx, dt, a):
     return constant_advancing_euler_eq(old_solution, spacediff.backward_diff_1d, a, dx, dt)
 
