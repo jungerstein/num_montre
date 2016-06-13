@@ -5,7 +5,9 @@ import space_diff_uniform_grid as spacediff
 def constant_advancing_euler_eq(old_solution, dudx_method, a, dx, dt):
     dudx = dudx_method(old_solution, dx)
     dudt = (-a) * dudx
-    # TODO do not forget to apply boundary condition.
+    # TODO do not forget to refactor boundary condition out.
+    dudt[0] = dudt[1]
+    dudt[-1] = dudt[-2]
     return old_solution + dudt * dt
 
 
